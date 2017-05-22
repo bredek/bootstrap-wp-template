@@ -4,7 +4,7 @@
 add_theme_support( 'menus' );
 
 // removing admin area if needed
-add_filter( 'show_admin_bar', '__return_false' );
+// add_filter( 'show_admin_bar', '__return_false' );
 
 function theme_styles(){
     wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/css/bootstrap.min.css' );    
