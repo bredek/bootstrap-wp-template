@@ -1,5 +1,11 @@
 <?php 
 
+// adding menus support
+add_theme_support( 'menus' );
+
+// removing admin area if needed
+add_filter( 'show_admin_bar', '__return_false' );
+
 function theme_styles(){
     wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/css/bootstrap.min.css' );    
     wp_enqueue_style( 'main_css', get_template_directory_uri() . '/css/style.css' );    
@@ -22,4 +28,16 @@ function theme_js(){
 add_action( 'wp_enqueue_scripts' , 'theme_styles' );
 add_action( 'wp_enqueue_scripts' , 'theme_js' );
 
+// registering menu
+function register_theme_menu(){
+	register_nav_menus(
+		array(
+			'primary-menu' => __('Primary Menu')
+			// 'secondary-menu' => __('Secondary Menu'),
+		)
+	);
+}
+add_action('init', 'register_theme_menu');
+
 ?>
+
