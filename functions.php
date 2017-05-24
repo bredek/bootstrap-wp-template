@@ -58,6 +58,7 @@ create_widget( 'Front Page Left', 'front-left', 'Displays on the left of the hom
 create_widget( 'Front Page Center', 'front-center', 'Displays in the center of the homepage' );
 create_widget( 'Front Page Right', 'front-right', 'Displays on the right of the homepage' );
 create_widget( 'Sidebar Widget', 'sidebar', 'Displays on the sidebar of the page' );
+create_widget( 'Blog Sidebar Widget', 'blog-sidebar', 'Displays on the blog sidebar of the page' );
 
 ?>
 
